@@ -1,0 +1,19 @@
+server:
+  port: 8085
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+       driver-class-name: com.mysql.jdbc.Driver
+       url: jdbc:mysql://127.0.0.1/guli_sms
+       username: root
+       password: 194934
+
+  redis: localhost:6379
+mybatis-plus:
+  mapper-locations: classpath:mapper/sms/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
